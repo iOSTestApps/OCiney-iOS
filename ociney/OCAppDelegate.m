@@ -22,6 +22,7 @@
 #import "OCCreditsViewController.h"
 #import "AnalyticsKit.h"
 #import "AnalyticsKitGoogleAnalyticsProvider.h"
+#import <BuddyBuildSDK/BuddyBuildSDK.h>
 
 @interface OCAppDelegate(){
     NSInteger tagControllerActive;
@@ -32,6 +33,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [BuddyBuildSDK setup];
+    
     // Override point for customization after application launch.
     
     [Fabric with:@[CrashlyticsKit]];
